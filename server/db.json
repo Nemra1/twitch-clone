@@ -1,0 +1,38 @@
+{
+  "streams": [
+    {
+      "title": "Playing CS",
+      "description": "2019 game show",
+      "id": 1
+    },
+    {
+      "title": "Konstantin stream",
+      "description": "playing",
+      "id": 2
+    },
+    {
+      "title": "Zhora",
+      "description": "walking",
+      "userId": "116710611736467935867",
+      "id": 3
+    },
+    {
+      "title": "Expect Unexpected",
+      "description": "somebehavior",
+      "userId": "116710611736467935867",
+      "id": 4
+    },
+    {
+      "title": "I am not coded",
+      "description": "done",
+      "userId": "116710611736467935867",
+      "id": 5
+    },
+    {
+      "title": "Creating data with prgrammatic nav",
+      "description": "this",
+      "userId": "116710611736467935867",
+      "id": 6
+    }
+  ]
+}
