@@ -22,6 +22,7 @@ class StreamList extends Component {
   }
 
   renderAdmin(stream){
+    console.log(stream)
     if(stream.userId === this.props.currentUserId){
       return (
           <div className="right floated content">
