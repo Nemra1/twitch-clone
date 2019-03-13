@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
+import flv from 'flv.js'; //get to resource converts it and servers data
 
 class StreamShow extends Component {
-
-  componentDidMount() {
-    this.props.fetchStream(this.props.match.params.id)
+  constructor(props) {
+    super(props)
+    this.videoRef = React.createRef()
   }
+
+
+    componentDidMount(){
+    console.log(this.videoRef)
+      this.props.fetchStream(this.props.match.params.id)
+      this.player = flv.createPlayer({
+        type: 'flv',
+        url: 'http://localhost:8000/live/STREAM_NAME.flv'
+      });
+    }
+
+
 
   render() {
     if(!this.props.stream) {
@@ -15,6 +28,7 @@ class StreamShow extends Component {
     const { title, description } = this.props.stream;
     return (
         <div>
+          <video ref={this.videoRef} style={{width: '100%'}} controls={true}/>
           <h1>{title}</h1>
           <h5>{description}</h5>
         </div>
