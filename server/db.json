@@ -11,21 +11,9 @@
       "id": 2
     },
     {
-      "title": "Test Stream",
-      "description": "updating with PATCH",
-      "userId": "116710611736467935867",
-      "id": 3
-    },
-    {
       "title": "My New Updated Stream",
       "description": "Awesome stream video updated today 2:43pm",
       "id": 4
-    },
-    {
-      "title": "test",
-      "description": "i am description field",
-      "userId": "116710611736467935867",
-      "id": 5
     }
   ]
 }
