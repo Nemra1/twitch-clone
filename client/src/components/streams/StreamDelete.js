@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Modal from '../Modal';
-// import deleteStream from '../actions';
-import { fetchStream } from '../../actions';
-import { deleteStream } from "../../actions";
-import { connect } from 'react-redux';
 import history from '../../history';
+import { deleteStream, fetchStream } from "../../actions";
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 

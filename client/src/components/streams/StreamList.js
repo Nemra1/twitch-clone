@@ -22,7 +22,6 @@ class StreamList extends Component {
   }
 
   renderAdmin(stream){
-    console.log(stream)
     if(stream.userId === this.props.currentUserId){
       return (
           <div className="right floated content">
@@ -41,7 +40,9 @@ class StreamList extends Component {
               <i className="large middle aligned icon camera"></i>
               <div className="content">
                 <div className="header">
-                  {stream.title}
+                  <Link to={`streams/${stream.id}`}>
+                    {stream.title}
+                  </Link>
                 </div>
                 <div className="desciption">
                   {stream.description}
