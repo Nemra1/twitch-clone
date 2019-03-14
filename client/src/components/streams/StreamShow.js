@@ -3,20 +3,35 @@ import { connect } from 'react-redux';
 import { fetchStream } from '../../actions';
 import flv from 'flv.js'; //get to resource converts it and servers data
 
-class StreamShow extends Component {
-  constructor(props) {
+class StreamShow extends Component{
+  constructor(props){
     super(props)
     this.videoRef = React.createRef()
   }
 
 
     componentDidMount(){
-    console.log(this.videoRef)
-      this.props.fetchStream(this.props.match.params.id)
+      const { id } = this.props.match.params.id
+      this.props.fetchStream(id)
+      this.buildPlayer()
+    }
+
+    componentDidUpdate(){
+      this.buildPlayer()
+    }
+
+  buildPlayer(){
+      if(this.player || !this.props.stream){
+        return;
+      }
+      const { id } = this.props.match.params.id
       this.player = flv.createPlayer({
         type: 'flv',
-        url: 'http://localhost:8000/live/STREAM_NAME.flv'
+        url: `http://localhost:8000/live/${id}.flv`
       });
+      this.player.attachMediaElement(this.videoRef.current)
+      this.player.load()
+
     }
 
 
